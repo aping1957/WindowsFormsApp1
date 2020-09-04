@@ -51,7 +51,7 @@ namespace WindowsFormsApp1
         // This method requests the home page content for the specified server.
         private static string SocketSendReceive(string server, int port)
         {
-            string request = "GET /znyx.asp HTTP/1.1\r\nHost: " + server +
+            string request = "GET /15matoushan.asp HTTP/1.1\r\nHost: " + server +
                 "\r\nConnection: Close\r\n\r\n";
             Byte[] bytesSent = Encoding.ASCII.GetBytes(request);
             Byte[] bytesReceived = new Byte[256];
