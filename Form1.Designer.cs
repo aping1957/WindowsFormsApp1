@@ -33,6 +33,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,7 +44,8 @@
             this.textBoxRcv = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.textBox_web = new System.Windows.Forms.TextBox();
+            this.button_web = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,6 +74,14 @@
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(131, 17);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.BackColor = System.Drawing.SystemColors.Control;
+            this.toolStripStatusLabel2.ForeColor = System.Drawing.Color.Indigo;
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(68, 17);
+            this.toolStripStatusLabel2.Text = "串口未打开";
             // 
             // comboBox1
             // 
@@ -121,16 +131,16 @@
             // 
             // textBox_Send
             // 
-            this.textBox_Send.Location = new System.Drawing.Point(198, 331);
+            this.textBox_Send.Location = new System.Drawing.Point(198, 398);
             this.textBox_Send.Multiline = true;
             this.textBox_Send.Name = "textBox_Send";
-            this.textBox_Send.Size = new System.Drawing.Size(488, 94);
+            this.textBox_Send.Size = new System.Drawing.Size(488, 27);
             this.textBox_Send.TabIndex = 6;
             // 
             // buttonSend
             // 
             this.buttonSend.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonSend.Location = new System.Drawing.Point(702, 366);
+            this.buttonSend.Location = new System.Drawing.Point(702, 398);
             this.buttonSend.Name = "buttonSend";
             this.buttonSend.Size = new System.Drawing.Size(75, 23);
             this.buttonSend.TabIndex = 7;
@@ -140,17 +150,17 @@
             // 
             // textBoxRcv
             // 
-            this.textBoxRcv.Location = new System.Drawing.Point(198, 22);
+            this.textBoxRcv.Location = new System.Drawing.Point(198, 307);
             this.textBoxRcv.Multiline = true;
             this.textBoxRcv.Name = "textBoxRcv";
-            this.textBoxRcv.Size = new System.Drawing.Size(488, 272);
+            this.textBoxRcv.Size = new System.Drawing.Size(488, 47);
             this.textBoxRcv.TabIndex = 8;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(196, 7);
+            this.label3.Location = new System.Drawing.Point(196, 276);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 12);
             this.label3.TabIndex = 9;
@@ -160,25 +170,39 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(196, 316);
+            this.label4.Location = new System.Drawing.Point(196, 377);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 12);
             this.label4.TabIndex = 10;
             this.label4.Text = "To be send:";
             // 
-            // toolStripStatusLabel2
+            // textBox_web
             // 
-            this.toolStripStatusLabel2.BackColor = System.Drawing.SystemColors.Control;
-            this.toolStripStatusLabel2.ForeColor = System.Drawing.Color.Indigo;
-            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(68, 17);
-            this.toolStripStatusLabel2.Text = "串口未打开";
+            this.textBox_web.Location = new System.Drawing.Point(198, 23);
+            this.textBox_web.Multiline = true;
+            this.textBox_web.Name = "textBox_web";
+            this.textBox_web.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBox_web.Size = new System.Drawing.Size(488, 232);
+            this.textBox_web.TabIndex = 11;
+            // 
+            // button_web
+            // 
+            this.button_web.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button_web.Location = new System.Drawing.Point(702, 23);
+            this.button_web.Name = "button_web";
+            this.button_web.Size = new System.Drawing.Size(75, 23);
+            this.button_web.TabIndex = 12;
+            this.button_web.Text = "web";
+            this.button_web.UseVisualStyleBackColor = true;
+            this.button_web.Click += new System.EventHandler(this.button_web_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_web);
+            this.Controls.Add(this.textBox_web);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxRcv);
@@ -218,6 +242,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private System.Windows.Forms.TextBox textBox_web;
+        private System.Windows.Forms.Button button_web;
     }
 }
 
